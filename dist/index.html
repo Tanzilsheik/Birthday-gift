@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff8f0" />
+    <meta
+      name="description"
+      content="An interactive four-year love story and birthday surprise."
+    />
+    <title>A Birthday Surprise</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="orb orb-one"></span>
+      <span class="orb orb-two"></span>
+      <span class="orb orb-three"></span>
+    </div>
+
+    <main class="experience" aria-live="polite">
+      <header class="topbar">
+        <p class="eyebrow">A little journey for you</p>
+        <div class="progress" aria-label="Experience progress">
+          <span class="progress-fill" id="progressFill"></span>
+        </div>
+        <button class="sound-toggle" id="soundToggle" type="button" aria-label="Turn gentle sounds on">
+          <span aria-hidden="true">♪</span>
+        </button>
+      </header>
+
+      <section class="scene active" data-scene="0" aria-labelledby="introTitle">
+        <div class="scene-copy intro-copy">
+          <p class="kicker">Four years. One beautiful story.</p>
+          <h1 id="introTitle">You helped me<br /><em>become who I am.</em></h1>
+          <p class="subcopy">Before I celebrate your birthday, I want to celebrate what your love has meant to my life.</p>
+        </div>
+
+        <div class="envelope-wrap" aria-hidden="true">
+          <div class="spark spark-a">✦</div>
+          <div class="spark spark-b">✧</div>
+          <div class="envelope">
+            <div class="letter-peek"><span>four years of us</span></div>
+            <div class="envelope-back"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <div class="wax-seal">4</div>
+          </div>
+          <div class="flower flower-left">❀</div>
+          <div class="flower flower-right">❁</div>
+        </div>
+
+        <button class="primary-button" data-next type="button">
+          <span>Open our story</span><span aria-hidden="true">→</span>
+        </button>
+      </section>
+
+      <section class="scene night-scene" data-scene="1" aria-labelledby="lightsTitle" hidden>
+        <div class="stars" aria-hidden="true"></div>
+        <div class="moon" aria-hidden="true">☾</div>
+        <div class="scene-copy centered light-copy">
+          <p class="kicker warm">Four years of us</p>
+          <h2 id="lightsTitle">You became part of every version of me.</h2>
+          <p class="subcopy">Touch each star—one for every year we have grown together.</p>
+        </div>
+
+        <div class="year-constellation" aria-label="Four years of our relationship">
+          <button class="year-star" data-year="0" type="button" aria-pressed="false">
+            <span>1</span><small>The beginning</small>
+          </button>
+          <button class="year-star" data-year="1" type="button" aria-pressed="false">
+            <span>2</span><small>Your belief</small>
+          </button>
+          <button class="year-star" data-year="2" type="button" aria-pressed="false">
+            <span>3</span><small>My growth</small>
+          </button>
+          <button class="year-star" data-year="3" type="button" aria-pressed="false">
+            <span>4</span><small>Our future</small>
+          </button>
+        </div>
+        <figure class="year-memory" id="yearOneMemory" hidden>
+          <img src="photos/year-one.png" alt="A happy memory from the first year of our relationship">
+          <figcaption>Where our story began <span aria-hidden="true">♥</span></figcaption>
+        </figure>
+        <figure class="year-memory" id="yearTwoMemory" hidden>
+          <img src="photos/year-two.png" alt="A happy memory from the second year of our relationship">
+          <figcaption>Growing closer, side by side <span aria-hidden="true">♥</span></figcaption>
+        </figure>
+        <figure class="year-memory" id="yearThreeMemory" hidden>
+          <img src="photos/year-three.png" alt="A happy memory from the third year of our relationship">
+          <figcaption>Growing together <span aria-hidden="true">♥</span></figcaption>
+        </figure>
+        <figure class="year-memory portrait-memory" id="yearFourMemory" hidden>
+          <img src="photos/year-four.jpg" alt="A FaceTime memory from the fourth year of our relationship">
+          <figcaption>Still choosing us, across every distance <span aria-hidden="true">♥</span></figcaption>
+        </figure>
+        <p class="year-message" id="yearMessage" role="status">Begin with any star.</p>
+
+        <button class="primary-button gold" id="lightsButton" type="button" disabled>
+          <span>Light our next chapter</span><span aria-hidden="true">✦</span>
+        </button>
+      </section>
+
+      <section class="scene celebration-scene" data-scene="2" aria-labelledby="cakeTitle" hidden>
+        <div class="confetti-field" aria-hidden="true"></div>
+        <div class="scene-copy centered">
+          <p class="kicker">A celebration of you</p>
+          <h2 id="cakeTitle">Four candles. One beautiful soul.</h2>
+          <p class="subcopy">One candle for each year you have made my life brighter. Swipe down—or tap—to cut the cake.</p>
+        </div>
+
+        <div class="cake-zone" id="cakeZone" role="button" tabindex="0" aria-label="Cut the birthday cake">
+          <div class="candles" aria-hidden="true">
+            <i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i>
+          </div>
+          <div class="cake" aria-hidden="true">
+            <div class="cake-half cake-left">
+              <div class="cake-layer top"></div><div class="cake-layer middle"></div><div class="cake-layer bottom"></div>
+            </div>
+            <div class="cake-half cake-right">
+              <div class="cake-layer top"></div><div class="cake-layer middle"></div><div class="cake-layer bottom"></div>
+            </div>
+            <span class="cut-line"></span>
+          </div>
+          <p class="gesture-hint"><span aria-hidden="true">↓</span> swipe to cut</p>
+        </div>
+
+        <div class="success-card" id="cakeSuccess" hidden>
+          <p class="kicker">Four years, still choosing you</p>
+          <h3>Every year with you changed me.</h3>
+          <p>The best gift was never the cake. It was having you beside me while I learned who I could become.</p>
+          <button class="primary-button compact" data-next type="button">Make a wish <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene wish-scene" data-scene="3" aria-labelledby="wishTitle" hidden>
+        <div class="scene-copy centered">
+          <p class="kicker">My wish for you</p>
+          <h2 id="wishTitle">May the love you gave me return to you.</h2>
+          <p class="subcopy">Hold the glowing heart and make a wish. Mine is to keep growing beside you.</p>
+        </div>
+
+        <button class="wish-heart" id="wishHeart" type="button" aria-label="Hold to make your wish">
+          <span class="heart-ring"></span>
+          <span class="heart-core" aria-hidden="true">♥</span>
+          <span class="wish-progress" aria-hidden="true"></span>
+        </button>
+        <p class="hold-label" id="holdLabel">Press and hold</p>
+
+        <div class="wish-complete" id="wishComplete" hidden>
+          <p>My wish is to keep growing beside you ✨</p>
+          <button class="primary-button compact" data-next type="button">See our moments <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene memories-scene" data-scene="4" aria-labelledby="memoriesTitle" hidden>
+        <div class="scene-copy centered">
+          <p class="kicker">Four years, countless moments</p>
+          <h2 id="memoriesTitle">The best parts of my life have you in them.</h2>
+          <p class="subcopy">These are pieces of the home we found in each other.</p>
+        </div>
+
+        <div class="photo-stack" aria-label="Our photo memories">
+          <figure class="photo-card photo-one has-photo">
+            <div class="photo-placeholder"><img src="photos/photo_1.jpeg" alt="" /></div>
+            <figcaption>Where our story lives</figcaption>
+          </figure>
+          <figure class="photo-card photo-two has-photo">
+            <div class="photo-placeholder"><img src="photos/photo_2.0.jpeg" alt="" /></div>
+            <figcaption>The smile that carried me</figcaption>
+          </figure>
+          <figure class="photo-card photo-three has-photo">
+            <div class="photo-placeholder"><img src="photos/photo_3.jpeg" alt="" /></div>
+            <figcaption>Still choosing you</figcaption>
+          </figure>
+        </div>
+
+        <button class="primary-button" data-next type="button">Read my note <span aria-hidden="true">→</span></button>
+      </section>
+
+      <section class="scene note-scene" data-scene="5" aria-labelledby="noteTitle" hidden>
+        <div class="paper">
+          <span class="paper-flower top" aria-hidden="true">❀</span>
+          <span class="paper-flower bottom" aria-hidden="true">❁</span>
+          <p class="kicker">A note from my heart</p>
+          <h2 id="noteTitle">To <span data-recipient>my love</span>,</h2>
+          <div class="personal-note" data-note>
+            <p>Happy birthday to the woman who has loved me through four years of becoming.</p>
+            <p>When I look at the person I was when we began and the person I am today, I see your love throughout that journey. You stood beside me, believed in me, and gave me strength on the days I struggled to find it myself.</p>
+            <p>You never tried to turn me into somebody else. You helped me discover the better version of who I already was. Your love became my calm, my courage, and the quiet voice reminding me that I could keep going.</p>
+            <p>I am proud of what we have built together, and even more grateful for the way you helped me build myself. Whatever comes next, I want to keep growing, laughing, dreaming, and creating a beautiful life beside you.</p>
+            <p>Four years down, and I still feel lucky that our story is only beginning.</p>
+          </div>
+          <p class="signoff">With all my love,<br /><strong data-sender>Tanzil</strong></p>
+        </div>
+        <button class="primary-button" data-next type="button">One last surprise <span aria-hidden="true">→</span></button>
+      </section>
+
+      <section class="scene finale-scene" data-scene="6" aria-labelledby="finaleTitle" hidden>
+        <div class="finale-burst" aria-hidden="true"></div>
+        <div class="balloon balloon-one" aria-hidden="true">♥</div>
+        <div class="balloon balloon-two" aria-hidden="true">♥</div>
+        <div class="final-bear" aria-hidden="true">
+          <span class="bear-ears"></span><span class="bear-face">•ᴗ•</span><span class="bear-body"></span>
+          <span class="party-hat">△</span>
+        </div>
+        <div class="scene-copy centered finale-copy">
+          <p class="kicker">Four years down. Our story keeps growing.</p>
+          <h2 id="finaleTitle">Happy Birthday,<br /><em data-recipient>my love</em>!</h2>
+          <p class="subcopy">Thank you for loving me through every version of myself—and for helping me become someone I am proud to be.</p>
+          <p class="signature">My favourite chapter will always be the one with you in it.<br />With all my love, <span data-sender>Tanzil</span> ♥</p>
+        </div>
+        <div class="final-actions">
+          <button class="primary-button" id="replayButton" type="button">Replay the surprise <span aria-hidden="true">↺</span></button>
+          <button class="text-button" id="confettiButton" type="button">More confetti, please ✦</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
